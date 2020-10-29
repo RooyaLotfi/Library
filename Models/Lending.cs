@@ -23,6 +23,7 @@ namespace MyLibrary.Dal.Models
 
         public User User { get; set; } 
 
+        public List<LendingBook> LendingBooks { get; set; }
 
 
         // when you wanna create a nullable data
