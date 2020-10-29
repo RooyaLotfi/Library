@@ -34,6 +34,7 @@ namespace MyLibrary.Dal.Models
 
         public List<AuthorBook> AuthorBooks { get; set; }
 
+
         public Book()
         {
             // you can access publisher ID 
