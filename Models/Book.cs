@@ -8,12 +8,19 @@ namespace MyLibrary.Dal.Models
     {
         public int ID { get; set; }
         public string Title { get; set; }
+       
         public string Subject { get; set; }
+       
         public string Description { get; set;}
+      
         public short Edition { get; set; }
+      
         public short Copies { get; set; }
+      
         public double ReplacementCost { get; set; }
+      
         public int ISBN { get; set; }
+      
         public int PublisherId { get; set; }
         
         public Publisher Publisher { get; set; }
