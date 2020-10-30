@@ -4,6 +4,14 @@ using System.Text;
 
 namespace MyLibrary.Dal.Models
 {
+    public enum LendingStatus : byte
+    {
+        Borrowed = 0,
+        Delayed = 1,
+        ReturnedNoDelay = 2,
+        ReturnedWithDelay = 3
+    }
+
     class Lending : EntityBase
     {
         public int Id { get; set; }
@@ -17,7 +25,8 @@ namespace MyLibrary.Dal.Models
         public float? Fee { get; set; }
         // we defined fee as nullable. 
 
-        public byte Status { get; set; }
+        public LendingStatus Status { get; set; }
+
 
         public int UserID { get; set; }
 
@@ -25,6 +34,11 @@ namespace MyLibrary.Dal.Models
 
         public List<LendingBook> LendingBooks { get; set; }
 
+        public Lending()
+        {
+            this.Status = LendingStatus.Borrowed;
+        }
+        
 
         // when you wanna create a nullable data
         // you can use this: DateTime? ReturnDate;
@@ -38,5 +52,6 @@ namespace MyLibrary.Dal.Models
         public int StaffID { get; set; }
 
         public Staff Staff { get; set; }
+
     }
 }
