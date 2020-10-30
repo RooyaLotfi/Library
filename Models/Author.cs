@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyLibrary.Dal.Models
 {
-    class Author
+    class Author : EntityBase
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
