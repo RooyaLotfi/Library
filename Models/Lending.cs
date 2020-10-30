@@ -34,5 +34,9 @@ namespace MyLibrary.Dal.Models
         // one user can lend so many. one lending is done
         // by one user. This is a one to many relationship
         */ 
+
+        public int StaffID { get; set; }
+
+        public Staff Staff { get; set; }
     }
 }
